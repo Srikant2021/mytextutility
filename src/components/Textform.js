@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function Textform(props) {
-    const [text, setText] = useState('');
+    const [text, setText] = useState('Srikant Pradhan');
     const convertToUpper = () => {
         let str = text;
         str = str.toUpperCase();
@@ -23,7 +23,7 @@ export default function Textform(props) {
         setText(newtext.join(" "));
     }
     return (
-        <> <div style={{color:props.theme==='dark'?'white':'black'}}>
+        <> <div style={{color:props.theme==='dark'?'black':'white'}}>
             <div className="mb-3">
                 <h2>{props.title}</h2>
                 <textarea className="form-control" value={text} style={{backgroundColor:props.theme==='dark'?'darkgray':'white',
@@ -32,7 +32,7 @@ export default function Textform(props) {
                 <button type="button" disabled={text.length===0} onClick={convertToUpper} className="btn btn-primary my-3 mx-2">ToUpperCase</button>
                 <button type="button" disabled={text.length===0} onClick={convertToLower} className="btn btn-primary my-3 mx-2">ToLowerCase</button>
                 <button type="button" disabled={text.length===0} onClick={clearTextArea} className="btn btn-primary my-3 mx-2">ClearTextArea</button>
-                <button type="button" onClick={removeWhiteSpaces} className="btn btn-primary my-3 mx-2">RemoveWhiteSpaces</button>
+                <button type="button" onClick={removeWhiteSpaces} className="btn btn-primary my-3 mx-2">RemoveExtraSpaces</button>
             </div>
             <div className="container my-1">
                 <h4>Text Summary...</h4>

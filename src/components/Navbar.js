@@ -36,7 +36,7 @@ export default function Navbar(props) {
               <button className="btn btn mx-1 custom" onClick={changeToCyan} style={{backgroundColor:'cyan'}} type="button">CYAN</button>
            
             <div className={`form-check form-switch text-${props.theme === 'dark' ? 'light' : 'dark'}`}>
-              <input className="form-check-input" onClick={props.changeTheme} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+              <input className="form-check-input" onClick={props.changeTheme} type="checkbox" role="switch" id="flexSwitchCheckDefault" disabled />
               <label className="form-check-label" htmlFor="flexSwitchCheckDefault">EnableDarkTheme</label>
             </div>
           </div>
